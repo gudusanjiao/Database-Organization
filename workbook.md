@@ -11,6 +11,13 @@ du -sh
 # unmount
 sudo umount /media/johnsonseq
 
+# Mount backup drive
+sudo mount /dev/sdf1 /media/sphagnum_Nov8th2023
+sudo mount -o rw,auto,user,fmask=0022,dmask=0000,uid=1001,gid=1001 /dev/sdc1 /media/sphagnum_Nov8th2023
+sudo rsync -r /home /media/sphagnum_Nov8th2023
+sudo umount /media/sphagnum_Nov8th2023
+
+# Remount
 sudo mount /dev/sdf1 /media/johnsonseq/
 sudo mount -o rw,auto,user,fmask=0022,dmask=0000,uid=1001,gid=1001 /dev/sdc1 /media/johnsonseq/
 ```
