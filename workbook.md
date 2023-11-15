@@ -7,6 +7,7 @@ I will unmount the drive from Sphagnum. Here are some command lines I might use:
 sudo mkdir /media/sphagnum_Nov8th2023
 # check disk usage
 du -sh
+lsblk
 
 # unmount
 sudo umount /media/johnsonseq
